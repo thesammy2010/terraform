@@ -12,10 +12,4 @@ variable "txt_records" {
       comment = string
     })
   )
-  # type = list(object({
-  #   name    = string,
-  #   value   = string,
-  #   proxied = bool,
-  #   comment = string
-  # }))
 }
