@@ -1,5 +1,4 @@
 resource "cloudflare_record" "TXT" {
-  # for_each = var.txt_records
   for_each = {
     for idx, record in var.txt_records :
     "${record.name}-${sha1(record.value)}" => record
