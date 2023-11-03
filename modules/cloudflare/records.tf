@@ -10,7 +10,4 @@ resource "cloudflare_record" "TXT" {
   value   = each.value["value"]
   comment = each.value["comment"]
   proxied = each.value["proxied"]
-  tags = [
-    "terraform"
-  ]
 }
