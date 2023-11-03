@@ -14,8 +14,9 @@ variable "cloudflare_account_id" {
 }
 
 variable "txt_records" {
-  type = map(
+  type = list(
     object({
+      name    = string,
       value   = string,
       proxied = bool,
       comment = string
