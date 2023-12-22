@@ -38,3 +38,32 @@ resource "cloudflare_record" "AAAA" {
   proxied = each.value["proxied"] != null ? each.value["proxied"] : false
   ttl     = each.value["ttl"] != null ? each.value["ttl"] : null
 }
+
+resource "cloudflare_record" "CNAME" {
+  for_each = {
+    for idx, record in var.cname_records :
+    "${record.name}-${sha1(record.value)}" => record
+  }
+  zone_id = var.cloudflare_zone_id
+  type    = "CNAME"
+  name    = each.value["name"]
+  value   = each.value["value"]
+  comment = each.value["comment"] != null ? each.value["comment"] : null
+  proxied = each.value["proxied"] != null ? each.value["proxied"] : false
+  ttl     = each.value["ttl"] != null ? each.value["ttl"] : null
+}
+
+resource "cloudflare_record" "MX" {
+  for_each = {
+    for idx, record in var.mx_records :
+    "${record.name}-${sha1(record.value)}" => record
+  }
+  zone_id  = var.cloudflare_zone_id
+  type     = "MX"
+  name     = each.value["name"]
+  value    = each.value["value"]
+  comment  = each.value["comment"] != null ? each.value["comment"] : null
+  proxied  = each.value["proxied"] != null ? each.value["proxied"] : false
+  ttl      = each.value["ttl"] != null ? each.value["ttl"] : null
+  priority = each.value["priority"] != null ? each.value["priority"] : null
+}
