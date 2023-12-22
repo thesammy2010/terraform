@@ -6,19 +6,16 @@ module "cloudflare" {
     {
       "name" : "_dmarc.mail",
       "value" : "v=DMARC1; p=quarantine; pct=100; adkim=s; aspf=s",
-      "proxied" : false,
       "comment" : "SimpleLogin",
     },
     {
       "name" : "mail"
       "value" : "v=spf1 include:simplelogin.co ~all",
-      "proxied" : false,
       "comment" : "SimpleLogin",
     },
     {
       "name" : "mail",
       "value" : "sl-verification=iexaqmuqgizrxuitllmharfijvpqla",
-      "proxied" : false,
       "comment" : "SimpleLogin",
     },
   ]
@@ -78,6 +75,27 @@ module "cloudflare" {
       "value" : "2606:50c0:8000::153",
       "comment" : "GitHub",
       "proxied" : true,
+    }
+  ]
+  cname_records = [
+    {
+      "name" : "dkim._domainkey.mail",
+      "value" : "dkim._domainkey.simplelogin.co",
+      "comment" : "SimpleLogin"
+    }
+  ]
+  mx_records = [
+    {
+      "name" : "mail",
+      "value" : "mx1.simplelogin.co",
+      "priority" : 10,
+      "comment" : "SimpleLogin",
+    },
+    {
+      "name" : "mail",
+      "value" : "mx2.simplelogin.co",
+      "priority" : 20,
+      "comment" : "SimpleLogin"
     }
   ]
 }

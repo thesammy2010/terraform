@@ -27,7 +27,7 @@ variable "a_records" {
       {
         name    = string,
         value   = string,
-        proxied = bool,
+        proxied = optional(bool),
         comment = optional(string),
         ttl     = optional(number),
       }
@@ -43,12 +43,45 @@ variable "aaaa_records" {
       {
         name    = string,
         value   = string,
-        proxied = bool,
+        proxied = optional(bool),
         comment = optional(string),
         ttl     = optional(number),
       }
     )
   )
-  description = "Map of A record values to add"
+  description = "Map of AAAA record values to add"
+  default     = []
+}
+
+variable "cname_records" {
+  type = list(
+    object(
+      {
+        name    = string,
+        value   = string,
+        proxied = optional(bool),
+        comment = optional(string),
+        ttl     = optional(number),
+      }
+    )
+  )
+  description = "Map of CNAME record values to add"
+  default     = []
+}
+
+variable "mx_records" {
+  type = list(
+    object(
+      {
+        name     = string,
+        value    = string,
+        proxied  = optional(bool),
+        comment  = optional(string),
+        ttl      = optional(number),
+        priority = optional(number),
+      }
+    )
+  )
+  description = "Map of MX record values to add"
   default     = []
 }
