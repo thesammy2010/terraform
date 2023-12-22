@@ -99,12 +99,17 @@ module "cloudflare" {
       "comment" : "SimpleLogin",
     },
     {
-      "name" : "dkim02._domainkey",
+      "name" : "dkim._domainkey.thesammy2010.com",
+      "value" : "dkim._domainkey.simplelogin.co",
+      "comment" : "SimpleLogin",
+    },
+    {
+      "name" : "dkim02._domainkey.thesammy2010.com",
       "value" : "dkim02._domainkey.simplelogin.co.",
       "comment" : "SimpleLogin",
     },
     {
-      "name" : "dkim03._domainkey",
+      "name" : "dkim03._domainkey.thesammy2010.com",
       "value" : "dkim03._domainkey.simplelogin.co.",
       "comment" : "SimpleLogin",
     }
