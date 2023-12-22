@@ -54,4 +54,30 @@ module "cloudflare" {
       "proxied" : true,
     }
   ]
+  aaaa_records = [
+    {
+      "name" : "thesammy2010.com",
+      "value" : "2606:50c0:8003::153",
+      "comment" : "GitHub",
+      "proxied" : true,
+    },
+    {
+      "name" : "thesammy2010.com",
+      "value" : "2606:50c0:8002::153",
+      "comment" : "GitHub",
+      "proxied" : true,
+    },
+    {
+      "name" : "thesammy2010.com",
+      "value" : "2606:50c0:8001::153",
+      "comment" : "GitHub",
+      "proxied" : true,
+    },
+    {
+      "name" : "thesammy2010.com",
+      "value" : "2606:50c0:8000::153",
+      "comment" : "GitHub",
+      "proxied" : true,
+    }
+  ]
 }

@@ -36,3 +36,19 @@ variable "a_records" {
   description = "Map of A record values to add"
   default     = []
 }
+
+variable "aaaa_records" {
+  type = list(
+    object(
+      {
+        name    = string,
+        value   = string,
+        proxied = bool,
+        comment = optional(string),
+        ttl     = optional(number),
+      }
+    )
+  )
+  description = "Map of A record values to add"
+  default     = []
+}
