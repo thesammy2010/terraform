@@ -18,6 +18,21 @@ module "cloudflare" {
       "value" : "sl-verification=iexaqmuqgizrxuitllmharfijvpqla",
       "comment" : "SimpleLogin",
     },
+    {
+      "name" : "thesammy2010.com",
+      "value" : "sl-verification=lbujgkpdypcdikfpracxopphygazun",
+      "comment" : "SimpleLogin",
+    },
+    {
+      "name" : "thesammy2010.com",
+      "value" : "v=spf1 include:simplelogin.co ~all",
+      "comment" : "SimpleLogin"
+    },
+    {
+      "name" : "_dmarc",
+      "value" : "v=DMARC1; p=quarantine; pct=100; adkim=s; aspf=s",
+      "comment" : "SimpleLogin"
+    }
   ]
   a_records = [
     {
@@ -81,7 +96,17 @@ module "cloudflare" {
     {
       "name" : "dkim._domainkey.mail",
       "value" : "dkim._domainkey.simplelogin.co",
-      "comment" : "SimpleLogin"
+      "comment" : "SimpleLogin",
+    },
+    {
+      "name" : "dkim02._domainkey",
+      "value" : "dkim02._domainkey.simplelogin.co.",
+      "comment" : "SimpleLogin",
+    },
+    {
+      "name" : "dkim03._domainkey",
+      "value" : "dkim03._domainkey.simplelogin.co.",
+      "comment" : "SimpleLogin",
     }
   ]
   mx_records = [
@@ -96,6 +121,18 @@ module "cloudflare" {
       "value" : "mx2.simplelogin.co",
       "priority" : 20,
       "comment" : "SimpleLogin"
-    }
+    },
+    {
+      "name" : "thesammy2010.com",
+      "value" : "mx1.simplelogin.co",
+      "priority" : 10,
+      "comment" : "SimpleLogin",
+    },
+    {
+      "name" : "thesammy2010.com",
+      "value" : "mx2.simplelogin.co",
+      "priority" : 20,
+      "comment" : "SimpleLogin"
+    },
   ]
 }
