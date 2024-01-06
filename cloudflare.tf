@@ -92,7 +92,7 @@ module "cloudflare" {
       "proxied" : true,
     },
     {
-      "name": "api.thesammy2010.com",
+      "name": "api",
       "value": "2a09:8280:1::24:d7ed",
       "comment": "Fly.io",
       "proxied": true,
