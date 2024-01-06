@@ -32,7 +32,7 @@ module "cloudflare" {
       "name" : "_dmarc",
       "value" : "v=DMARC1; p=quarantine; pct=100; adkim=s; aspf=s",
       "comment" : "SimpleLogin"
-    }
+    },
   ]
   a_records = [
     {
@@ -90,6 +90,12 @@ module "cloudflare" {
       "value" : "2606:50c0:8000::153",
       "comment" : "GitHub",
       "proxied" : true,
+    },
+    {
+      "name": "api.thesammy2010.com",
+      "value": "2a09:8280:1::24:d7ed",
+      "comment": "Fly.io",
+      "proxied": true,
     }
   ]
   cname_records = [
@@ -112,6 +118,16 @@ module "cloudflare" {
       "name" : "dkim03._domainkey.thesammy2010.com",
       "value" : "dkim03._domainkey.simplelogin.co.",
       "comment" : "SimpleLogin",
+    },
+    {
+      "name": "api.thesammy2010.com",
+      "value": "api-thesammy2010-com.fly.dev",
+      "comment": "Fly.io"
+    },
+    {
+      "name": "_acme-challenge.api.thesammy2010.com",
+      "value": "api.thesammy2010.com.rzrg9m.flydns.net.",
+      "comment": "Fly.io"
     }
   ]
   mx_records = [
