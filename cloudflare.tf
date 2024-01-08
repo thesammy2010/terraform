@@ -91,12 +91,6 @@ module "cloudflare" {
       "comment" : "GitHub",
       "proxied" : true,
     },
-    {
-      "name": "api",
-      "value": "2a09:8280:1::24:d7ed",
-      "comment": "Fly.io",
-      "proxied": true,
-    }
   ]
   cname_records = [
     {
@@ -120,14 +114,14 @@ module "cloudflare" {
       "comment" : "SimpleLogin",
     },
     {
-      "name": "api.thesammy2010.com",
-      "value": "api-thesammy2010-com.fly.dev",
-      "comment": "Fly.io"
+      "name" : "api.thesammy2010.com",
+      "value" : "api-thesammy2010-com.fly.dev",
+      "comment" : "Fly.io"
     },
     {
-      "name": "_acme-challenge.api.thesammy2010.com",
-      "value": "api.thesammy2010.com.rzrg9m.flydns.net.",
-      "comment": "Fly.io"
+      "name" : "_acme-challenge.api.thesammy2010.com",
+      "value" : "api.thesammy2010.com.rzrg9m.flydns.net.",
+      "comment" : "Fly.io"
     }
   ]
   mx_records = [
