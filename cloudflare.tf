@@ -133,6 +133,11 @@ module "cloudflare" {
       "name" : "_acme-challenge.api.thesammy2010.com",
       "value" : "api.thesammy2010.com.rzrg9m.flydns.net.",
       "comment" : "Fly.io"
+    },
+    {
+      "name": "squash.thesammy2010.com",
+      "value": "thesammy2010.github.io",
+      "comment": "GitHub"
     }
   ]
   mx_records = [
