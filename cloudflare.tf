@@ -75,6 +75,30 @@ module "cloudflare" {
       "value" : "185.199.108.153",
       "comment" : "GitHub",
       "proxied" : true,
+    },
+    {
+      "name" : "squash.thesammy2010.com",
+      "value" : "185.199.111.153",
+      "comment" : "GitHub",
+      "proxied" : true,
+    },
+    {
+      "name" : "squash.thesammy2010.com",
+      "value" : "185.199.110.153",
+      "comment" : "GitHub",
+      "proxied" : true,
+    },
+    {
+      "name" : "squash.thesammy2010.com",
+      "value" : "185.199.109.153",
+      "comment" : "GitHub",
+      "proxied" : true,
+    },
+    {
+      "name" : "squash.thesammy2010.com",
+      "value" : "185.199.108.153",
+      "comment" : "GitHub",
+      "proxied" : true,
     }
   ]
   aaaa_records = [
@@ -98,6 +122,30 @@ module "cloudflare" {
     },
     {
       "name" : "thesammy2010.com",
+      "value" : "2606:50c0:8000::153",
+      "comment" : "GitHub",
+      "proxied" : true,
+    },
+    {
+      "name" : "squash.thesammy2010.com",
+      "value" : "2606:50c0:8003::153",
+      "comment" : "GitHub",
+      "proxied" : true,
+    },
+    {
+      "name" : "squash.thesammy2010.com",
+      "value" : "2606:50c0:8002::153",
+      "comment" : "GitHub",
+      "proxied" : true,
+    },
+    {
+      "name" : "squash.thesammy2010.com",
+      "value" : "2606:50c0:8001::153",
+      "comment" : "GitHub",
+      "proxied" : true,
+    },
+    {
+      "name" : "squash.thesammy2010.com",
       "value" : "2606:50c0:8000::153",
       "comment" : "GitHub",
       "proxied" : true,
