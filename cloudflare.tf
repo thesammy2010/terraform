@@ -33,6 +33,17 @@ module "cloudflare" {
       "value" : "v=DMARC1; p=quarantine; pct=100; adkim=s; aspf=s",
       "comment" : "SimpleLogin"
     },
+    {
+
+      "name": "_github-pages-challenge-thesammy2010",
+      "value": "d0ceb10994227267613bf5287f1788",
+      "comment": "GitHub"
+    },
+    {
+      "name": "_github-pages-challenge-thesammy2010.squash",
+      "value": "5b37f078440fa6efcf6ae5b2ec1713",
+      "comment": "GitHub",
+    },
   ]
   a_records = [
     {
