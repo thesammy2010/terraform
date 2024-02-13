@@ -108,6 +108,12 @@ module "cloudflare" {
       "comment" : "GitHub",
       "proxied" : true,
     },
+    {
+      "name" : "api.thesammy2010.com",
+      "value" : "2a09:8280:1::24:d7ed",
+      "comment" : "Fly.io",
+      "proxied" : true
+    },
   ]
   cname_records = [
     {
@@ -129,11 +135,6 @@ module "cloudflare" {
       "name" : "dkim03._domainkey.thesammy2010.com",
       "value" : "dkim03._domainkey.simplelogin.co.",
       "comment" : "SimpleLogin",
-    },
-    {
-      "name" : "api.thesammy2010.com",
-      "value" : "api-thesammy2010-com.fly.dev",
-      "comment" : "Fly.io"
     },
     {
       "name" : "_acme-challenge.api.thesammy2010.com",
