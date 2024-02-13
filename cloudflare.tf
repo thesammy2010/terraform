@@ -35,14 +35,14 @@ module "cloudflare" {
     },
     {
 
-      "name": "_github-pages-challenge-thesammy2010",
-      "value": "d0ceb10994227267613bf5287f1788",
-      "comment": "GitHub"
+      "name" : "_github-pages-challenge-thesammy2010",
+      "value" : "d0ceb10994227267613bf5287f1788",
+      "comment" : "GitHub"
     },
     {
-      "name": "_github-pages-challenge-thesammy2010.squash",
-      "value": "5b37f078440fa6efcf6ae5b2ec1713",
-      "comment": "GitHub",
+      "name" : "_github-pages-challenge-thesammy2010.squash",
+      "value" : "5b37f078440fa6efcf6ae5b2ec1713",
+      "comment" : "GitHub",
     },
   ]
   a_records = [
@@ -75,7 +75,13 @@ module "cloudflare" {
       "value" : "185.199.108.153",
       "comment" : "GitHub",
       "proxied" : true,
-    }
+    },
+    {
+      "name" : "api.thesammy2010.com",
+      "value" : "66.241.125.154",
+      "comment" : "Fly.io",
+      "proxied" : true
+    },
   ]
   aaaa_records = [
     {
@@ -135,9 +141,9 @@ module "cloudflare" {
       "comment" : "Fly.io"
     },
     {
-      "name": "squash.thesammy2010.com",
-      "value": "thesammy2010.github.io",
-      "comment": "GitHub"
+      "name" : "squash.thesammy2010.com",
+      "value" : "thesammy2010.github.io",
+      "comment" : "GitHub"
     }
   ]
   mx_records = [
