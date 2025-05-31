@@ -78,7 +78,7 @@ module "cloudflare" {
     },
     {
       "name" : "api.thesammy2010.com",
-      "value" : "66.241.125.154",
+      "value" : "66.241.125.223",
       "comment" : "Fly.io",
       "proxied" : true
     },
@@ -110,7 +110,7 @@ module "cloudflare" {
     },
     {
       "name" : "api.thesammy2010.com",
-      "value" : "2a09:8280:1::24:d7ed",
+      "value" : "2a09:8280:1::79:10c6:0",
       "comment" : "Fly.io",
       "proxied" : true
     },
@@ -138,7 +138,7 @@ module "cloudflare" {
     },
     {
       "name" : "_acme-challenge.api.thesammy2010.com",
-      "value" : "api.thesammy2010.com.rzrg9m.flydns.net.",
+      "value" : "api.thesammy2010.com.961xoy.flydns.net.",
       "comment" : "Fly.io"
     },
     {
