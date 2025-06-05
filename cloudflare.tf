@@ -80,7 +80,7 @@ module "cloudflare" {
       "name" : "api.thesammy2010.com",
       "value" : "66.241.125.223",
       "comment" : "Fly.io",
-      "proxied" : true
+      "proxied" : false
     },
   ]
   aaaa_records = [
@@ -112,7 +112,7 @@ module "cloudflare" {
       "name" : "api.thesammy2010.com",
       "value" : "2a09:8280:1::79:10c6:0",
       "comment" : "Fly.io",
-      "proxied" : true
+      "proxied" : false
     },
   ]
   cname_records = [
