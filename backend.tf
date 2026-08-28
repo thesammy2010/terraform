@@ -1,9 +1,13 @@
 terraform {
-  required_version = "1.6.1"
+  required_version = "1.16.0"
   required_providers {
     cloudflare = {
       source  = "cloudflare/cloudflare"
       version = "~> 4.0"
+    }
+    fly = {
+      source  = "stategraph/fly"
+      version = "~> 0.2.4"
     }
   }
   cloud {
