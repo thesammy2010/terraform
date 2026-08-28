@@ -1,9 +1,8 @@
 module "fly_postgres" {
-  source        = "./modules/fly"
-  fly_api_token = var.terraform_cloud_deploy_token
-  org_slug      = "leo-966"
-  app_name      = "thesammy2010"
-  region        = "lhr"
+  source   = "./modules/fly"
+  org_slug = "leo-966"
+  app_name = "thesammy2010"
+  region   = "lhr"
 
   # Digest-pinned so that a retag of flyio/postgres-flex:15.3 upstream does not
   # silently show up as a diff. Bump both tag and digest together on upgrade.
@@ -20,12 +19,8 @@ module "fly_postgres" {
     memory_mb = 256
   }
 
-  mount_path                 = "/data"
-  volume_name                = "pg_data"
-  volume_size_gb             = 1
-  volume_encrypted           = true
-  volume_auto_backup_enabled = true
-  volume_snapshot_retention  = 5
+  volume_size_gb            = 1
+  volume_snapshot_retention = 5
 
   services = [
     {
@@ -98,6 +93,5 @@ module "fly_postgres" {
     path = "/metrics"
   }
 
-  restart_policy      = "always"
   restart_max_retries = 0
 }

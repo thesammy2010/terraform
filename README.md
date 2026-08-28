@@ -13,8 +13,13 @@ Setup
 cloudflare_api_token  = ""
 cloudflare_account_id = ""
 cloudflare_zone_id    = ""
+```
 
-terraform_cloud_deploy_token = ""
+2. Export a Fly.io API token. The provider reads it from the environment, so
+   there is no Terraform variable for it. In HCP Terraform this is set as a
+   workspace *environment* variable rather than a Terraform variable.
+```shell
+export FLY_API_TOKEN="$(fly tokens create org)"
 ```
 
 
@@ -31,6 +36,9 @@ The cluster is modelled as `fly_app` + `fly_machine` + `fly_volume` rather than
   HCP Terraform's remote runners, so it could never run in this workspace.
 - Every attribute on `fly_postgres_cluster` forces replacement. A drift in
   `volume_size` or `vm_size` would plan a destroy of the database.
+
+Authentication is the `FLY_API_TOKEN` environment variable, read directly by the
+provider.
 
 The provider is [`stategraph/fly`](https://github.com/stategraph/terraform-provider-fly).
 Its repository was archived in August 2026, so it is pinned to `~> 0.2.4` and

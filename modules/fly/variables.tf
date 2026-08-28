@@ -1,9 +1,3 @@
-variable "fly_api_token" {
-  type        = string
-  description = "Fly.io API token"
-  sensitive   = true
-}
-
 variable "org_slug" {
   type        = string
   description = "Fly.io organization slug the app belongs to"
