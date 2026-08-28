@@ -5,6 +5,10 @@ terraform {
       source  = "cloudflare/cloudflare"
       version = "~> 4.0"
     }
+    fly = {
+      source  = "stategraph/fly"
+      version = "~> 0.2.4"
+    }
   }
   cloud {
     organization = "thesammy2010"
