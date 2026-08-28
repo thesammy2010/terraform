@@ -90,7 +90,15 @@ resource "fly_machine" "postgres" {
   # Fly stamps its own bookkeeping onto machine metadata (fly_flyctl_version,
   # managed-by-fly-deploy and friends) whenever the Postgres tooling touches the
   # cluster. Tracking it would make every plan dirty, so it is left to Fly.
+  #
+  # cordoned, desired_status and skip_launch are ignored for a different reason:
+  # the provider's importer does not populate them, so they always plan as a
+  # change on adoption. Acting on that change is not possible anyway - the
+  # provider acquires a machine lease in Update and then issues the update
+  # without the lease nonce, so Fly rejects its own request with a 409. The
+  # cluster's real configuration is unaffected by any of these attributes, so
+  # ignoring them makes the plan honest rather than hiding a genuine diff.
   lifecycle {
-    ignore_changes = [metadata]
+    ignore_changes = [metadata, cordoned, desired_status, skip_launch, check]
   }
 }
