@@ -82,6 +82,11 @@ module "cloudflare" {
       "comment" : "Fly.io",
       "proxied" : false
     },
+    {
+      "name" : "local.thesammy2010.com",
+      "value" : "127.0.0.1",
+      "comment" : "Local development, for Sign in with Apple on the squash site",
+    },
   ]
   aaaa_records = [
     {
